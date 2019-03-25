@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Streaming on TCP
+  //-video(controls, style='max-width:70%' id="videoPlayer")
+    source(src=videoSrc, type="video/mp4")
+    p el navegador no soporta HTML5 VIDEO TAG
+  video(src="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd", controls, data-dashjs-player, style='max-width:70%')
+  script(src="https://cdn.dashjs.org/latest/dash.all.min.js")
